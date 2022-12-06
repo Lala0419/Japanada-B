@@ -1,0 +1,18 @@
+{
+  "name": "my-sns",
+  "version": "1.0.0",
+  "description": "my-sns",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Nanaya Miki",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "mongoose": "^6.4.4",
+    "nodemon": "^2.0.19"
+  }
+}
