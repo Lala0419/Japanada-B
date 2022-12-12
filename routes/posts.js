@@ -2,6 +2,7 @@
 
 const router = require("express").Router();
 const Post = require("../models/Post");
+const User = require("../models/User");
 
 // router.get("/", (req, res)=>{
 //     res.send("post router");
@@ -57,11 +58,13 @@ router.delete("/:id", async (req, res) => {
 });
 
 //get one specific post
-router.get("/:id", async (req, res) => {
+router.get("/:postId", async (req, res) => {
 	//id of the post you want to delete
 	try {
-		const post = await Post.findById(req.params.id); //
-		return res.status(200).json(post);
+		const post = await Post.findById(req.params.postId); //
+		const user = await User.findById(post.userId);
+		console.log(user);
+		return res.status(200).json({ post, user });
 	} catch (err) {
 		return res.status(403).json(err);
 	}
@@ -77,14 +80,5 @@ router.get("/timeline/all", async (req, res) => {
 		}
 	});
 });
-
-// {
-// 	try {
-// 		const allPosts = await Post.find({});
-// 		return res.status(200).json(allPosts);
-// 	} catch (err) {
-// 		return res.status(403).json(err);
-// 	}
-// });
 
 module.exports = router;

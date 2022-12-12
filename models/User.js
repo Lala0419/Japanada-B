@@ -38,7 +38,6 @@ const UserSchema = new mongoose.Schema(
 			defult: false,
 		},
 		desc: {
-			//description
 			type: String,
 			max: 200,
 		},

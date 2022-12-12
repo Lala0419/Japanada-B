@@ -14,7 +14,6 @@ const PostSchema = new mongoose.Schema(
 			},
 			desc: {
 				type: String,
-				max: 500,
 				required: true,
 			},
 			img: {
@@ -34,6 +33,10 @@ const PostSchema = new mongoose.Schema(
 				required: true,
 			},
 			bathroom: {
+				type: String,
+				required: true,
+			},
+			price: {
 				type: String,
 				required: true,
 			},
