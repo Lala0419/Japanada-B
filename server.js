@@ -27,7 +27,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
 app.get("/", (req, res) => {
-	res.send("hello express");
+	res.send("your JAPANADA server is running!");
 });
 
 app.listen(PORT, () => console.log(`server is running ${PORT}`));
