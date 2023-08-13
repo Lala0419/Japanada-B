@@ -5,7 +5,7 @@ const cors = require("cors");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
-const PORT = 8000;
+const PORT = 8000 || "https://japanada-backend.onrender.com";
 const mongoose = require("mongoose");
 require("dotenv").config();
 
