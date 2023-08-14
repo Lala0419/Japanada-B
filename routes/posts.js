@@ -74,7 +74,7 @@ router.get("/:postId", async (req, res) => {
 router.get("/timeline/all", async (req, res) => {
 	Post.find({}, function (err, result) {
 		if (err) {
-			console.log(err);
+			res.json(err);
 		} else {
 			res.json(result);
 		}
