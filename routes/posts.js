@@ -70,6 +70,16 @@ router.get("/:postId", async (req, res) => {
 	}
 });
 
+router.get("/home", async (req, res) => {
+	Post.find({}, function (err, result) {
+		if (err) {
+			res.json(err);
+		} else {
+			res.json(result);
+		}
+	});
+});
+
 // get all posts
 router.get("/timeline/all", async (req, res) => {
 	Post.find({}, function (err, result) {
